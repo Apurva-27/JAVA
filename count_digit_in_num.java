@@ -15,7 +15,7 @@ public class count_digit_in_num {
 		 System.out.println("Enter the number.");
 		 n=sc.nextInt();
 		 
-		 for(;n!=0;)
+		 for(;n!=0;)	
 		 {
 			n = n/10;
 			count++;
