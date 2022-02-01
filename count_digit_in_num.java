@@ -8,14 +8,14 @@ public class count_digit_in_num {
 
 	public static void main(String[] args) {
 		
-		int n, count=1;
+		int n, count=0;
 		
 		 Scanner  sc= new Scanner(System.in);
 		 
 		 System.out.println("Enter the number.");
 		 n=sc.nextInt();
 		 
-		 while(n>=10)
+		 for(;n!=0;)
 		 {
 			n = n/10;
 			count++;
