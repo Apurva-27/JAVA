@@ -6,7 +6,7 @@ public class pattern_two {
 		
 		for(i=1; i<=5; i++)
 		{
-			for(j=i; j>=1; j--)
+			for(j=i; j>=1; j--) //for(j=1; j<=i; j++)
 			{
 				System.out.print("*");
 			}
