@@ -32,7 +32,7 @@ class sbi extends Bank
 
 
 
-public class single {
+public class singleexample {
 
 	public static void main(String[] args) {
 		
