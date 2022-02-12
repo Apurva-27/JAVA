@@ -1,10 +1,10 @@
 package Inheritance;
 
-class Bank
+class Banke
 {
 	String Bank_name;
 	
-	public Bank(String Bank_name)
+	public Banke(String Bank_name)
 	{
 		this.Bank_name=Bank_name;
 	}//Bank Constructor
@@ -16,7 +16,7 @@ class Bank
 	
 }//bank
 
-class sbi extends Bank
+class sbi extends Banke
 {
 	public sbi(String Bank_name)
 	{
@@ -61,3 +61,8 @@ public class multiple {
 
 }//main
 
+/*
+Bank Name: State bank of india
+Bonus :30000
+
+*/
