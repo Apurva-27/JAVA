@@ -23,6 +23,13 @@ public class unboxing {
 		char c = ch;
 		
 		System.out.println(c);	// a
+		
+		String s = "5";
+		Integer it =Integer.parseInt(s);
+		
+		System.out.println(it);	// 5
+	
+		Double d1 = Double.parseDouble(s);
+		System.out.println(d1);	//5.0
 	}
-
 }
