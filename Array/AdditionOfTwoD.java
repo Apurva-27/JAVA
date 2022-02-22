@@ -31,7 +31,7 @@ public class AdditionOfTwoD {
 		{
 			for(j=0; j<3; j++)
 			{
-				System.out.print(a[i][j]);
+				System.out.print(a[i][j]+" ");
 			}
 			System.out.println();
 		}//elements in a
@@ -53,7 +53,7 @@ public class AdditionOfTwoD {
 		{
 			for(j=0; j<3; j++)
 			{
-				System.out.print(b[i][j]);
+				System.out.print(b[i][j]+" ");
 			}
 			System.out.println();
 		}//elements in b
@@ -74,7 +74,7 @@ public class AdditionOfTwoD {
 		{
 			for(j=0; j<3; j++)
 			{
-				System.out.print(result[i][j]);
+				System.out.print(result[i][j]+" ");
 			}
 			System.out.println();
 		}//result
