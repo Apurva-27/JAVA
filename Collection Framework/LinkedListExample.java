@@ -1,6 +1,7 @@
 package CollectionFramework;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -108,10 +109,68 @@ public class LinkedListExample {
 		link.add("apple");
 		link.add("mango");
 		link.add("apple");
+		link.add("kiwi");
+		link.add("banana");
+		link.add("orange");
 		System.out.println(link+"\n");
 		
 		int index = link.lastIndexOf("apple");
 		System.out.println("Last index of apple "+index+"\n");
+	
+		//replace
+		link.set(2,"watermelon");
+		
+		for(String s :link)
+		{
+			System.out.println(s);
+		}
+		
+		//element presemnt
+		if(link.contains("kiwi"))
+			System.out.println("element present\n");
+		else
+			System.out.println("element not present\n");
+		
+		//push element at head and return
+		link.push("Dragon fruit");
+		System.out.println("After element push. "+link+"\n");
+		
+		//pop element and return
+		String p = link.pop();
+		System.out.println("Popped element: "+p);//apple
+		System.out.println(link+"\n");
+		
+		//pop() return head element
+		System.out.println("Pop head element:"+link.poll()+"\n");
+		System.out.println(link+"\n");
+		
+		//pollFirst-retrieve first element and remove
+		System.out.println(link.pollFirst()+"\n");
+		System.out.println("After pollFirst: "+link+"\n");
+		
+		//pollLast-retrieve last element and remove
+		System.out.println(link.pollLast()+"\n");
+		System.out.println("After pollLast: "+link+"\n");
+		
+		//Convert LinkedList to Arraylist
+		LinkedList<String> linke =new LinkedList<String>();
+		
+		link.add("apple");
+		link.add("mango");
+		link.add("apple");
+		link.add("kiwi");
+		link.add("banana");
+		link.add("orange");
+		
+		List<String> list = new ArrayList<String>(linke);
+		
+		for(String s:list)
+		{
+			System.out.println("ArrayList: "+s);
+		}	
+		
+		
+	
 	}
 
 }
