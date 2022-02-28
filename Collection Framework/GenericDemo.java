@@ -1,3 +1,6 @@
+//advantages 1-type safety 2-eleminating the need for type-casting 
+//3-reusability
+
 package CollectionFramework;
 
 import java.util.*;
