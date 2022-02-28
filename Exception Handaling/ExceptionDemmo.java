@@ -23,7 +23,11 @@ public class ExceptionDemo {
 		}
 		catch(ArithmeticException e)
 		{
-			System.out.println(e);
+			System.out.println(e.getMessage());
+				//or
+			System.out.println("Exception occurs");
+				//or
+			e.printStackTrace();
 		}
 		
 		System.out.println("End Code");
@@ -37,9 +41,12 @@ public class ExceptionDemo {
 /*
 	OUTPUT
 Enter 1st value
-10
+12
 Enter 2nd value
 0
+/ by zero
 java.lang.ArithmeticException: / by zero
+Exception occurs
 End Code
+	at ExceptionHandling.ExceptionDemo.main(ExceptionDemo.java:21)
 */
