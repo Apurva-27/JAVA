@@ -40,6 +40,10 @@ public class nestedtrycatchblock {
 			
 		}//external
 		
+		finally
+		{
+			System.out.println("Finally block always execute.");
+		}//finally
 	}
 
 }
