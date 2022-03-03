@@ -1,0 +1,11 @@
+//calculation file two
+
+package ExceptionHandling;
+
+public class test2 extends Exception
+{
+	test2(String message)
+	{
+		super(message);
+	}
+}
