@@ -1,0 +1,104 @@
+*shows databases in system
+->show databases;
+
+*create new database in in already existing database
+->create database anudip;
+
+*use perticular database
+->use anudip;
+
+*create table in database
+->create table student(sid int primary key,sname varchar(20)not null,smarks int(10));
+
+*show tables creted table in database
+->show tables;
+
+*Describe contentent in table student
+-> describe  student;
+
+*add values into tables
+->insert into student(sid,sname,smarks)values(101,'raj',67);
+
+*add column
+->alter table student add column country varchar(20);
+->alter table student add column city varchar(20);
+
+*update or set the element 
+->update student set country='India';
+->update student set country='australia' where sname=ram;
+->update student set country='london' where sid=101;
+->update student set country='london',city='abc' where sid=101;
+->update student set city='efg' where sid=102;
+
+*view the table
+->select* from student;
+-select* from student where sid=101;
+->select* from student where country='India';
+->select sname from student where country='london';
+->select sname as "student name",smarks as "Marks" from student where sid=101;
+->select distinct(country) from student;
+
+*delect perticular row
+-> delete from student where sid=101;
+
+*remove column
+-> alter table student drop column city;
+
+ *select in range
+->select * from student where sid>=102 and sid<=105;
+->select * from studentwhere sid between 102 and 105;
+
+*select multiple perticular id;
+->select* from student where sid=103 or sid=105 or sid=106;
+->select* from student where sid in(103,105,106); 
+
+*set the limit
+->select * from student limit 4; //(from top)
+
+*Order by clause it specify the the order 
+
+*sort infoemation asending order by order by clause
+->select* from student order by sname;
+->select* from student order by smark;
+
+*desending
+->select* from student order by sname desc;
+->select* from student order by sid desc;
+->select* from student order by smark desc;
+
+*like operator
+Q.)select student data where name start with a
+->select * from student where sname like 'r%';  
+Q.)select those info where 'u' is in 2nd letter in city;
+->select * from student where city like '_u%';
+Q.)last character is 'a'
+-> select * from student where city like '%a';
+Q.)select those info where 'a' is in 1st letter in name and last letter is 'a'  
+->select * from student where sname like 'a%a';
+Q.) letters are any position like 'na'
+->select * from student where city like '%na%';
+Q.)start with 'k' and having after 3 characters(3 underscore after)
+-> select * from student where city like 'k___%';
+
+*Aggregate functions
+Q.)sum of marks in table
+-> select sum(smarks) from student;
+Q.)total marks
+->select sum(smarks) as "total marks" from student;
+Q.)Calculate the average
+->select avg(smarks) as "avarage marks" from student;
+Q.)count number of all rows in table
+-> select count(*) from student;
+Q.)count number of name in table
+-> select count(sname) from student;
+Q.)display whos marks are min  
+-> select min(smarks) from student;
+Q.)display whos marks are max
+-> select max(smarks) from student;
+Q.)find out student details whos marks are less(nested query)
+->select*  from student where smarks=(select min(smarks) from student);
+Q.)find out student details whos marks are max(nested query)
+-> select*  from student where smarks=(select max(smarks) from student);
+
+
+
