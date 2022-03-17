@@ -1,6 +1,6 @@
 package com.jdbc;
 
-import java.sql.DriverManager;
+
 import java.sql.Statement;
 import java.sql.Connection;
 
@@ -10,12 +10,8 @@ public class createTableEmployee {
 		Connection conn=null;
 		try 
 		{
-			//register driver
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			ConnectionDb.connectDb();
 			
-			//establish the connection
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/anudip","root","password");
-		
 			//System.out.println(conn);
 			//create statement
 			Statement stmt = conn.createStatement();
