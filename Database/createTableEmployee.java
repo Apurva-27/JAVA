@@ -7,10 +7,10 @@ import java.sql.Connection;
 public class createTableEmployee {
 
 	public static void main(String[] args) {
-		Connection conn=null;
+		
 		try 
 		{
-			ConnectionDb.connectDb();
+			Connection conn=ConnectionDb.connectDb();
 			
 			//System.out.println(conn);
 			//create statement
