@@ -21,12 +21,9 @@ public class UpdateDataEmployee {
 			System.out.println("Enter Emp salary:");
 			int empsal=sc.nextInt();
 			
-			
-			String query="update emp set ename='"+empname+"',sal="+empsal+" where eid=101";
-			
 			//create query
-			/*String query="update emp set ename='ajith',sal=45000 where eid=101";
-			*/
+			String query="update emp set ename='"+empname+"',sal="+empsal+" where eid=101";
+						
 			int row=stmt.executeUpdate(query);
 			
 			System.out.println(row+" Record updated Sucessfully....");
