@@ -1,0 +1,16 @@
+1. Adding HTML5 Audio
+	1. You want to play native audio on your web page.
+
+  	2. Add the audio element, with the src attribute referencing the location of your audio
+	file and fallback content for older browsers:
+
+	<audio src="audio.mp3" controls>
+	</audio>
+
+2. Adding HTML5 Video
+	1. You want to play native video on your web page.
+	2. Use the video element with the addition of a src attribute that references the location
+of your video file:
+
+	<video src="video.ogv" controls></video>
+
