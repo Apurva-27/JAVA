@@ -1,0 +1,36 @@
+<!--https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script>
+	
+	//1.  Framing an image
+	
+	function draw() {
+	  var canvas = document.getElementById('canvas');
+	  var ctx = canvas.getContext('2d');
+
+	  // Draw slice
+	  ctx.drawImage(document.getElementById('source'),
+					30, 71, 104, 124, 21, 20, 87, 104);
+
+	  // Draw frame
+	  ctx.drawImage(document.getElementById('frame'), 0, 0);
+	}
+	
+	
+	
+  </script>
+  
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="450" height="150"></canvas>
+   
+   <div style="display:none;">
+     <img id="source" src="rhino.jpg" width="300" height="227">
+     <img id="frame" src="Canvas_picture_frame.png" width="132" height="150">
+   </div>
+ </body>
+</html>

@@ -1,0 +1,31 @@
+<!--https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script>
+	//1. createPattern example
+	
+	function draw() {
+	  var ctx = document.getElementById('canvas').getContext('2d');
+
+	  // create new image object to use as pattern
+	  var img = new Image();
+	  img.src = 'pattern.png';
+	  img.onload = function() {
+
+		// create pattern
+		var ptrn = ctx.createPattern(img, 'repeat');
+		ctx.fillStyle = ptrn;
+		ctx.fillRect(0, 0, 150, 150);
+
+	  }
+	}
+  </script>
+  
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>

@@ -1,0 +1,44 @@
+Canvas
+
+1. In 2004, Apple developed a pixel-based drawing element named canvas for the Mac
+OS X dashboard that was later employed in the Safari Browser. The HTML5 specification
+has adopted this element and its associated set of APIs to provide basic drawing
+functionality. Before the canvas element, browsers required a third-party plug-in to
+render these basic drawings. Since this is a pixel-based drawing mechanism rather than
+a vector and layer-based system, the underlying functionality is rudimentary; however,
+as you will learn in this chapter, it can still provide a means to provide rich displays.
+
+2. At the heart of implementing the canvas are two components: the canvas element
+in the HTML and the JavaScript to perform operations on the canvas. As with a
+painter, the canvas is blank until the painter uses brushes, tools, and medium to create
+the resulting work of art. In the same manner, you program into your JavaScript the
+motions using canvas shape tools, effects, and transformations. These are then drawn
+on the canvas, resulting in an updated view of new pixels.
+
+3. The canvas element gives you a blank surface (thus the name canvas), which you
+can use to render graphics, images, and text dynamically. The canvas functionality is
+massive.
+
+4. Example
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<style>
+			canvas {
+				border: 1px solid #000;
+			}
+			</style>
+		</head>
+		
+		<body>
+			<canvas id="myCanvas" width="640" height="480"></canvas>
+		</body>
+	</html>
+
+5. The canvas element has the standard attributes of an HTML element. Minimally,
+you will need the id, width, and height attributes to be able to reference the canvas
+from your JavaScript and set the size of the canvas. In addition, the canvas element
+can be styled like any other element through CSS.
+
+6. 

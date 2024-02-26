@@ -1,0 +1,31 @@
+<script>
+	// You must know  difference between variable and property
+	
+	//1. because drink is a variable not property.
+	/*
+	drink = "lemonjuice";
+	
+	var obj = {
+		drink : "applejuice",
+		getDrink : function() {
+			return drink;
+		}
+	};
+	
+	console.log(obj.getDrink());
+	*/
+	
+	//2. this.drink is a property, not a variable
+	/*
+	drink = "lemonjuice";
+	
+	var obj = {
+		drink : "applejuice",
+		getDrink : function() {
+			return this.drink; // this is the difference
+		}
+	};
+	
+	console.log(obj.getDrink());
+	*/
+</script>

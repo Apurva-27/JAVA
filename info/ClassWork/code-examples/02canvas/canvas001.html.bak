@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Showing shapes</title>
+	</head>
+	
+	<body>
+		<canvas>
+		</canvas>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!--
+canvas.getContext():--
+
+1. The canvas is initially blank.
+
+2. To display something, a script first needs to access the rendering context and draw on it. 
+
+3. The <canvas> element has a method called getContext(), used to obtain the rendering context and its drawing functions. 
+
+4. Checking for support
+	1. The content is displayed in browsers which do not support <canvas>.
+
+	2. Scripts can also check for support programmatically by simply testing for the presence of the getContext() method as shown below.
+
+	if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+    }
+	else {
+		// deal with old browsers
+	}
+	
+-->
+
+<!DOCTYPE html
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Canvas</title>
+    <script>
+      function draw() {
+        /*var canvas = document.getElementById('tutorial');
+        if (canvas.getContext) {
+          var ctx = canvas.getContext('2d');
+        }
+		else {
+			// deal with old browsers
+		}*/
+      }
+    </script>
+	
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+	  p {color:green}
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="150" height="150"></canvas>
+	<p>Hello Friends</p>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!--https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script>
+	//1. A simple line graph
+	
+	/*
+	function draw() {
+	  var ctx = document.getElementById('canvas').getContext('2d');
+	  var img = new Image();
+	  img.onload = function() {
+		ctx.drawImage(img, 0, 0);
+		ctx.beginPath();
+		ctx.moveTo(30, 96);
+		ctx.lineTo(70, 66);
+		ctx.lineTo(103, 76);
+		ctx.lineTo(170, 15);
+		ctx.stroke();
+	  };
+	  img.src = 'backdrop.png';
+	}
+	*/
+	
+	//2. Tiling an image
+	
+	/*
+	function draw() {
+	  var ctx = document.getElementById('canvas').getContext('2d');
+	  var img = new Image();
+	  img.onload = function() {
+		for (var i = 0; i < 4; i++) {
+		  for (var j = 0; j < 3; j++) {
+			ctx.drawImage(img, j * 50, i * 38, 50, 38);
+		  }
+		}
+	  };
+	  img.src = 'rhino.jpg';
+	}
+	*/
+	
+	
+	
+  </script>
+  
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="450" height="150"></canvas>
+ </body>
+</html>
