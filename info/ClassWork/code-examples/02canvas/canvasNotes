@@ -1,0 +1,134 @@
+Canvas
+
+1. <canvas> is an HTML element which can be used to draw graphics via scripting (usually JavaScript). 
+
+2. This can, for instance, be used to draw graphs, make photo composition or simple (and not so simple) animations.
+
+3. First introduced in WebKit by Apple for the OS X Dashboard, <canvas> has since been implemented in browsers. Today, all major browsers support it.
+
+4. Using the <canvas> element is not very difficult, but you do need a basic understanding of HTML and JavaScript. 
+
+5. The <canvas> element is not supported in some older browsers, but is supported in recent versions of all major browsers. 
+
+6. The default size of the canvas is 300 px × 150 px (width × height). 
+
+7. But custom sizes can be defined using the HTML height and width property. 
+
+8. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.
+
+9. JavaScript context object:-- 
+	1.  Sometimes the words “scope” and “context” are used interchangeably, which only leads to confusion because they are not the same thing.
+	
+	2. In JavaScript, “context” refers to an object. Within an object, the keyword “this” refers to that object (i.e. “self”), and provides an interface to the properties and methods that are members of that object.
+
+	3. When a function is executed, the keyword “this” refers to the object that the function is executed in.
+	
+	4. Here are a few scenarios:--
+		1. When a function executes in the global context, “this” refers to the global, or “window” object
+		
+		2. When a function is a method of an Object, “this” refers to that object (unless it is manually executed in the context of a different object)
+
+		3. When a function executes inside of another function (no matter how deeply nested), “this” refers to the object whose context within which it is executed
+		
+		4. When you instantiate a constructor function, inside of the instance object, “this” refers to the instance object
+		
+	5. Example: 
+		<script>
+			drink = "lemonjuice";
+			
+			var obj = {
+				drink : "applejuice",
+				getDrink : function() {
+					return drink;
+				}
+			};
+			
+			console.log(obj.getDrink());
+		</script>
+		
+		1. What will be the output? lemonjuice or applejuice?
+			It is lemonjuice. But why?
+			
+			This is because in the object “obj”, “drink” is a property of obj, not a variable. 
+			
+			Inside of functions, when reference is made to a variable, the JavaScript engine searches the scope chain and returns the first match it finds.
+			
+			Although this function executes in the context of “obj”, “obj” does not have a variable named “drink”. 
+			
+			It has a property named “drink”, but not a variable. 
+			
+			So the JavaScript engine searches the next level of the scope chain.
+
+			The next level of the scope chain is the global object, which contains a variable named “drink”, so the value of that variable (“lemonjuice”), is returned.
+	6. Example
+	
+		drink = "lemonjuice";
+	
+		var obj = {
+			drink : "applejuice",
+			getDrink : function() {
+				return this.drink; // this is the difference
+			}
+		};
+		
+		console.log(obj.getDrink());
+		
+		1. What will be the output this time? lemonjuice or applejuice?
+			It is applejuice. But why?
+			
+			The only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”.
+			
+			This is an important detail. When a function executes in the context of an object , the keyword “this” refers to that object. 
+			
+			You can access any of the properties of the object by using the “this” keyword, add new ones (e.g. this.color = “blue”), and change existing ones (e.g. this.drink = "juice").
+			
+10. The <canvas> element
+
+	1. <canvas id="tutorial" width="150" height="150"></canvas>
+	
+	2. At first sight a <canvas> looks like the <img> element, with the only clear difference being that it doesn't have the src and alt attributes.
+
+	3. Indeed, the <canvas> element has only two attributes, width and height.
+
+	4. These are both optional and can also be set using DOM properties. 
+	
+	5. When no width and height attributes are specified, the canvas will initially be 300 pixels wide and 150 pixels high. 
+	
+	6. The element can be sized arbitrarily by CSS, but during rendering the image is scaled to fit its layout size: if the CSS sizing doesn't respect the ratio of the initial canvas, it will appear distorted.
+
+	7. Note: If your renderings seem distorted, try specifying your width and height attributes explicitly in the <canvas> attributes, and not using CSS.
+
+	8. The id attribute isn't specific to the <canvas> element but is one of the global HTML attributes which can be applied to any HTML element (like class for instance). It is always a good idea to supply an id because this makes it much easier to identify it in a script.
+	
+	9. Scripts can also check for support programmatically by simply testing for the presence of the getContext() method. 
+	
+	10. If getContext() method returns true means canvas tag content can be displayed, else will not be displayed.
+	
+	11. Example:--
+	
+			<!DOCTYPE html>
+			<html>
+			  <head>
+				<meta charset="utf-8"/>
+				<title>Canvas</title>
+				<script>
+				  function draw() {
+					var canvas = document.getElementById('tutorial');
+					if (canvas.getContext) {
+					  var ctx = canvas.getContext('2d');
+					}
+				  }
+				</script>
+				
+				<style>
+				  canvas { border: 1px solid black; }
+				</style>
+			  </head>
+			  <body onload="draw();">
+				<canvas id="tutorial" width="150" height="150"></canvas>
+			  </body>
+			</html>
+		
+		The script includes a function called draw(), which is executed once the page finishes loading; this is done by listening for the load event on the document.
+		
+		
