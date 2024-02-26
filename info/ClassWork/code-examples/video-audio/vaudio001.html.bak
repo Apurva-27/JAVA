@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+
+<html>
+   <body>
+      
+      <video  width = "300" height = "200"  controls autoplay>
+         <source src = "video001.ogg" type ="video/ogg" />
+         <source src = "sample-mp4-file.mp4" type = "video/mp4" />
+         Your browser does not support the <video> element.
+      </video>
+      
+   </body>
+</html>
